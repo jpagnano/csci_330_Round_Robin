@@ -1,0 +1,212 @@
+adamsaland:cpu_simulator_cli/ $ ./scheduler.py -h
+
+-h, --help              show this help message and exit
+-s SEED, --seed=SEED    random
+-p PROCS, --procs=PROCS number of processes to generate
+-l PLIST, --plist=PLIST input a comma-separated list of processes
+-m MAXLEN, --maxlen=MAXLEN max process time
+-a ALGORITHM, --algorithm=ALGORITHM Choose Algorithm from: SJF, FIFO, RR
+-q QUANTUM, --quantum=QUANTUM Round Robin time quantum
+-c, --compute         compute
+
+1)
+adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 14 -a RR -c                                                                     [18:45:44]
+('ARG algorithm', 'RR')
+('ARG plist', '5,7,2,6,19,12')
+
+pid : 0, burst_time: 5.0
+pid : 1, burst_time: 7.0
+pid : 2, burst_time: 2.0
+pid : 3, burst_time: 6.0
+pid : 4, burst_time: 19.0
+pid : 5, burst_time: 12.0
+
+
+Execution trace:
+6 procs remaining
+[ time 0.0 ] burst_run_time pid: 0 | burst: 5.0 secs | burst_completion: 5.0
+5 procs remaining
+[ time 5.0 ] burst_run_time pid: 1 | burst: 7.0 secs | burst_completion: 12.0
+4 procs remaining
+[ time 12.0 ] burst_run_time pid: 2 | burst: 2.0 secs | burst_completion: 14.0
+3 procs remaining
+[ time 14.0 ] burst_run_time pid: 3 | burst: 6.0 secs | burst_completion: 20.0
+2 procs remaining
+[ time 20.0 ] burst_run_time pid: 4 | burst: 14.0 secs
+2 procs remaining
+[ time 34.0 ] burst_run_time pid: 5 | burst: 12.0 secs | burst_completion: 46.0
+1 procs remaining
+[ time 46.0 ] burst_run_time pid: 4 | burst: 5.0 secs | burst_completion: 51.0
+
+Simulation Statistics:
+pid: 0 | resonse: 0.0 | turnaround: 5.0 | wait: 0.0
+pid: 1 | resonse: 5.0 | turnaround: 12.0 | wait: 5.0
+pid: 2 | resonse: 12.0 | turnaround: 14.0 | wait: 12.0
+pid: 3 | resonse: 14.0 | turnaround: 20.0 | wait: 14.0
+pid: 4 | resonse: 20.0 | turnaround: 51.0 | wait: 32.0
+pid: 5 | resonse: 34.0 | turnaround: 46.0 | wait: 34.0
+Average: response: 14.1666666667, turnaround: 24.6666666667,  wait: 16.1666666667
+
+2)
+adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 7 -a RR -c                                                                      [18:48:09]
+('ARG algorithm', 'RR')
+('ARG plist', '5,7,2,6,19,12')
+
+pid : 0, burst_time: 5.0
+pid : 1, burst_time: 7.0
+pid : 2, burst_time: 2.0
+pid : 3, burst_time: 6.0
+pid : 4, burst_time: 19.0
+pid : 5, burst_time: 12.0
+
+
+Execution trace:
+6 procs remaining
+[ time 0.0 ] burst_run_time pid: 0 | burst: 5.0 secs | burst_completion: 5.0
+5 procs remaining
+[ time 5.0 ] burst_run_time pid: 1 | burst: 7.0 secs | burst_completion: 12.0
+4 procs remaining
+[ time 12.0 ] burst_run_time pid: 2 | burst: 2.0 secs | burst_completion: 14.0
+3 procs remaining
+[ time 14.0 ] burst_run_time pid: 3 | burst: 6.0 secs | burst_completion: 20.0
+2 procs remaining
+[ time 20.0 ] burst_run_time pid: 4 | burst: 7.0 secs
+2 procs remaining
+[ time 27.0 ] burst_run_time pid: 5 | burst: 7.0 secs
+2 procs remaining
+[ time 34.0 ] burst_run_time pid: 4 | burst: 7.0 secs
+2 procs remaining
+[ time 41.0 ] burst_run_time pid: 5 | burst: 5.0 secs | burst_completion: 46.0
+1 procs remaining
+[ time 46.0 ] burst_run_time pid: 4 | burst: 5.0 secs | burst_completion: 51.0
+
+Simulation Statistics:
+pid: 0 | resonse: 0.0 | turnaround: 5.0 | wait: 0.0
+pid: 1 | resonse: 5.0 | turnaround: 12.0 | wait: 5.0
+pid: 2 | resonse: 12.0 | turnaround: 14.0 | wait: 12.0
+pid: 3 | resonse: 14.0 | turnaround: 20.0 | wait: 14.0
+pid: 4 | resonse: 20.0 | turnaround: 51.0 | wait: 32.0
+pid: 5 | resonse: 27.0 | turnaround: 46.0 | wait: 34.0
+Average: response: 13.0, turnaround: 24.6666666667,  wait: 16.1666666667
+
+3)
+adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 10 -a RR -c                                                                     [18:48:18]
+('ARG algorithm', 'RR')
+('ARG plist', '5,7,2,6,19,12')
+
+pid : 0, burst_time: 5.0
+pid : 1, burst_time: 7.0
+pid : 2, burst_time: 2.0
+pid : 3, burst_time: 6.0
+pid : 4, burst_time: 19.0
+pid : 5, burst_time: 12.0
+
+
+Execution trace:
+6 procs remaining
+[ time 0.0 ] burst_run_time pid: 0 | burst: 5.0 secs | burst_completion: 5.0
+5 procs remaining
+[ time 5.0 ] burst_run_time pid: 1 | burst: 7.0 secs | burst_completion: 12.0
+4 procs remaining
+[ time 12.0 ] burst_run_time pid: 2 | burst: 2.0 secs | burst_completion: 14.0
+3 procs remaining
+[ time 14.0 ] burst_run_time pid: 3 | burst: 6.0 secs | burst_completion: 20.0
+2 procs remaining
+[ time 20.0 ] burst_run_time pid: 4 | burst: 10.0 secs
+2 procs remaining
+[ time 30.0 ] burst_run_time pid: 5 | burst: 10.0 secs
+2 procs remaining
+[ time 40.0 ] burst_run_time pid: 4 | burst: 9.0 secs | burst_completion: 49.0
+1 procs remaining
+[ time 49.0 ] burst_run_time pid: 5 | burst: 2.0 secs | burst_completion: 51.0
+
+Simulation Statistics:
+pid: 0 | resonse: 0.0 | turnaround: 5.0 | wait: 0.0
+pid: 1 | resonse: 5.0 | turnaround: 12.0 | wait: 5.0
+pid: 2 | resonse: 12.0 | turnaround: 14.0 | wait: 12.0
+pid: 3 | resonse: 14.0 | turnaround: 20.0 | wait: 14.0
+pid: 4 | resonse: 20.0 | turnaround: 49.0 | wait: 30.0
+pid: 5 | resonse: 30.0 | turnaround: 51.0 | wait: 39.0
+Average: response: 13.5, turnaround: 25.1666666667,  wait: 16.6666666667
+
+4)
+adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 8 -a RR -c                                                                      [18:48:36]
+('ARG algorithm', 'RR')
+('ARG plist', '5,7,2,6,19,12')
+
+pid : 0, burst_time: 5.0
+pid : 1, burst_time: 7.0
+pid : 2, burst_time: 2.0
+pid : 3, burst_time: 6.0
+pid : 4, burst_time: 19.0
+pid : 5, burst_time: 12.0
+
+
+Execution trace:
+6 procs remaining
+[ time 0.0 ] burst_run_time pid: 0 | burst: 5.0 secs | burst_completion: 5.0
+5 procs remaining
+[ time 5.0 ] burst_run_time pid: 1 | burst: 7.0 secs | burst_completion: 12.0
+4 procs remaining
+[ time 12.0 ] burst_run_time pid: 2 | burst: 2.0 secs | burst_completion: 14.0
+3 procs remaining
+[ time 14.0 ] burst_run_time pid: 3 | burst: 6.0 secs | burst_completion: 20.0
+2 procs remaining
+[ time 20.0 ] burst_run_time pid: 4 | burst: 8.0 secs
+2 procs remaining
+[ time 28.0 ] burst_run_time pid: 5 | burst: 8.0 secs
+2 procs remaining
+[ time 36.0 ] burst_run_time pid: 4 | burst: 8.0 secs
+2 procs remaining
+[ time 44.0 ] burst_run_time pid: 5 | burst: 4.0 secs | burst_completion: 48.0
+1 procs remaining
+[ time 48.0 ] burst_run_time pid: 4 | burst: 3.0 secs | burst_completion: 51.0
+
+Simulation Statistics:
+pid: 0 | resonse: 0.0 | turnaround: 5.0 | wait: 0.0
+pid: 1 | resonse: 5.0 | turnaround: 12.0 | wait: 5.0
+pid: 2 | resonse: 12.0 | turnaround: 14.0 | wait: 12.0
+pid: 3 | resonse: 14.0 | turnaround: 20.0 | wait: 14.0
+pid: 4 | resonse: 20.0 | turnaround: 51.0 | wait: 32.0
+pid: 5 | resonse: 28.0 | turnaround: 48.0 | wait: 36.0
+Average: response: 13.1666666667, turnaround: 25.0,  wait: 16.5
+
+5)
+adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 16 -a RR -c                                                                     [18:48:51]
+('ARG algorithm', 'RR')
+('ARG plist', '5,7,2,6,19,12')
+
+pid : 0, burst_time: 5.0
+pid : 1, burst_time: 7.0
+pid : 2, burst_time: 2.0
+pid : 3, burst_time: 6.0
+pid : 4, burst_time: 19.0
+pid : 5, burst_time: 12.0
+
+
+Execution trace:
+6 procs remaining
+[ time 0.0 ] burst_run_time pid: 0 | burst: 5.0 secs | burst_completion: 5.0
+5 procs remaining
+[ time 5.0 ] burst_run_time pid: 1 | burst: 7.0 secs | burst_completion: 12.0
+4 procs remaining
+[ time 12.0 ] burst_run_time pid: 2 | burst: 2.0 secs | burst_completion: 14.0
+3 procs remaining
+[ time 14.0 ] burst_run_time pid: 3 | burst: 6.0 secs | burst_completion: 20.0
+2 procs remaining
+[ time 20.0 ] burst_run_time pid: 4 | burst: 16.0 secs
+2 procs remaining
+[ time 36.0 ] burst_run_time pid: 5 | burst: 12.0 secs | burst_completion: 48.0
+1 procs remaining
+[ time 48.0 ] burst_run_time pid: 4 | burst: 3.0 secs | burst_completion: 51.0
+
+Simulation Statistics:
+pid: 0 | resonse: 0.0 | turnaround: 5.0 | wait: 0.0
+pid: 1 | resonse: 5.0 | turnaround: 12.0 | wait: 5.0
+pid: 2 | resonse: 12.0 | turnaround: 14.0 | wait: 12.0
+pid: 3 | resonse: 14.0 | turnaround: 20.0 | wait: 14.0
+pid: 4 | resonse: 20.0 | turnaround: 51.0 | wait: 32.0
+pid: 5 | resonse: 36.0 | turnaround: 48.0 | wait: 36.0
+Average: response: 14.5, turnaround: 25.0,  wait: 16.5
+
+                                                                                                                [18:48:55]
