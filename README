@@ -1,4 +1,4 @@
-adamsaland:cpu_simulator_cli/ $ ./scheduler.py -h
+:cpu_simulator_cli/ $ ./scheduler.py -h
 
 -h, --help              show this help message and exit
 -s SEED, --seed=SEED    random
@@ -10,7 +10,7 @@ adamsaland:cpu_simulator_cli/ $ ./scheduler.py -h
 -c, --compute         compute
 
 1)
-adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 14 -a RR -c                                                                     [18:45:44]
+:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 14 -a RR -c                                                                     [18:45:44]
 ('ARG algorithm', 'RR')
 ('ARG plist', '5,7,2,6,19,12')
 
@@ -48,7 +48,7 @@ pid: 5 | resonse: 34.0 | turnaround: 46.0 | wait: 34.0
 Average: response: 14.1666666667, turnaround: 24.6666666667,  wait: 16.1666666667
 
 2)
-adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 7 -a RR -c                                                                      [18:48:09]
+:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 7 -a RR -c                                                                      [18:48:09]
 ('ARG algorithm', 'RR')
 ('ARG plist', '5,7,2,6,19,12')
 
@@ -90,7 +90,7 @@ pid: 5 | resonse: 27.0 | turnaround: 46.0 | wait: 34.0
 Average: response: 13.0, turnaround: 24.6666666667,  wait: 16.1666666667
 
 3)
-adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 10 -a RR -c                                                                     [18:48:18]
+:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 10 -a RR -c                                                                     [18:48:18]
 ('ARG algorithm', 'RR')
 ('ARG plist', '5,7,2,6,19,12')
 
@@ -130,7 +130,7 @@ pid: 5 | resonse: 30.0 | turnaround: 51.0 | wait: 39.0
 Average: response: 13.5, turnaround: 25.1666666667,  wait: 16.6666666667
 
 4)
-adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 8 -a RR -c                                                                      [18:48:36]
+:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 8 -a RR -c                                                                      [18:48:36]
 ('ARG algorithm', 'RR')
 ('ARG plist', '5,7,2,6,19,12')
 
@@ -172,7 +172,7 @@ pid: 5 | resonse: 28.0 | turnaround: 48.0 | wait: 36.0
 Average: response: 13.1666666667, turnaround: 25.0,  wait: 16.5
 
 5)
-adamsaland:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 16 -a RR -c                                                                     [18:48:51]
+:cpu_simulator_cli/ $ ./scheduler.py -l 5,7,2,6,19,12 -q 16 -a RR -c                                                                     [18:48:51]
 ('ARG algorithm', 'RR')
 ('ARG plist', '5,7,2,6,19,12')
 
